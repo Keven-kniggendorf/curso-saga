@@ -45,7 +45,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.topic.product-validation-fail}")
     private String productValidationFailTopic;
 
-    //esse método é responsável por criar o consumidor do Kafka
+//    esse método é responsável por criar o consumidor do Kafka
     @Bean
     public ConsumerFactory<String, String> consumerFactory() {
         return new DefaultKafkaConsumerFactory<>(consumerProps());

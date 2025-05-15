@@ -81,30 +81,30 @@ public class KafkaConfig {
         return new KafkaTemplate<>(producerFactory);
     }
 
-    private NewTopic buildTopic(String name){
-        return TopicBuilder
-                .name(name)
-                .replicas(REPLICATION_COUNT)
-                .partitions(PARTITION_COUNT)
-                .build();
-    }
-
-    @Bean
-    public NewTopic orchestratorTopic() {
-        return buildTopic(orchestratorTopic);
-    }
-
-    @Bean
-    public NewTopic paymentSuccessTopic() {
-        return buildTopic(paymentSuccessTopic);
-
-    }
-
-    @Bean
-    public NewTopic paymentFailTopic() {
-        return buildTopic(paymentFailTopic);
-
-    }
+//    private NewTopic buildTopic(String name){
+//        return TopicBuilder
+//                .name(name)
+//                .replicas(REPLICATION_COUNT)
+//                .partitions(PARTITION_COUNT)
+//                .build();
+//    }
+//
+//    @Bean
+//    public NewTopic orchestratorTopic() {
+//        return buildTopic(orchestratorTopic);
+//    }
+//
+//    @Bean
+//    public NewTopic paymentSuccessTopic() {
+//        return buildTopic(paymentSuccessTopic);
+//
+//    }
+//
+//    @Bean
+//    public NewTopic paymentFailTopic() {
+//        return buildTopic(paymentFailTopic);
+//
+//    }
 
 
 

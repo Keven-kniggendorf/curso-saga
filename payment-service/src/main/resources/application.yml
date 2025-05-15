@@ -3,10 +3,12 @@ server:
 
 spring:
   kafka:
-    bootstrap-servers: ${KAFKA_BORKER:localhost:9092}
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
-      teste: teste
-    costumer:
+      orchestrator: orchestrator
+      payment-success: payment-success
+      payment-fail: payment-fail
+    consumer:
       group-id: payment-group
       auto-offset-reset: latest
 
