@@ -22,8 +22,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class KafkaConfig {
 
-//    private static final Integer PARTITION_COUNT = 1;
-//    private static final Integer REPLICATION_COUNT = 1;
+    private static final Integer PARTITION_COUNT = 1;
+    private static final Integer REPLICATION_COUNT = 1;
 
     //Mapeamento de tópicos para o Kafka - Comentário próprio
 
@@ -72,85 +72,85 @@ public class KafkaConfig {
         return new KafkaTemplate<>(producerFactory);
     }
 
-//    private NewTopic buildTopic(String name) {
-//        return TopicBuilder
-//                .name(name)
-//                .replicas(REPLICATION_COUNT)
-//                .partitions(PARTITION_COUNT)
-//                .build();
-//    }
-//
-//
-//    @Bean
-//    public NewTopic startSagaTopic() {
-//
-//        return buildTopic(ETopics.START_SAGA.getTopic());
-//    }
-//
-//
-//    @Bean
-//    public NewTopic orchestratorTopic() {
-//
-//        return buildTopic(ETopics.BASE_ORCHESTRATOR.getTopic());
-//    }
-//
-//    @Bean
-//    public NewTopic finishSuccessTopic() {
-//        return buildTopic(ETopics.FINISH_SUCCESS.getTopic());
-//
-//    }
-//
-//    @Bean
-//    public NewTopic finishFailTopic() {
-//        return buildTopic(ETopics.FINISH_FAIL.getTopic());
-//
-//
-//    }
-//
-//    @Bean
-//    public NewTopic productValidationSuccessTopic() {
-//        return buildTopic(ETopics.PRODUCT_VALIDATION_SUCCESS.getTopic());
-//
-//    }
-//
-//    @Bean
-//    public NewTopic productValidationFailTopic() {
-//        return buildTopic(ETopics.PRODUCT_VALIDATION_FAIL.getTopic());
-//
-//
-//    }
-//
-//
-//    @Bean
-//    public NewTopic paymentSuccessTopic() {
-//        return buildTopic(ETopics.PAYMENT_SUCCESS.getTopic());
-//
-//    }
-//
-//    @Bean
-//    public NewTopic paymentFailTopic() {
-//        return buildTopic(ETopics.PAYMENT_FAIL.getTopic());
-//
-//    }
-//
-//
-//    @Bean
-//    public NewTopic inventorySuccessTopic() {
-//        return buildTopic(ETopics.INVENTORY_SUCCESS.getTopic());
-//
-//    }
-//
-//    @Bean
-//    public NewTopic inventoryFailTopic() {
-//        return buildTopic(ETopics.INVENTORY_FAIL.getTopic());
-//
-//
-//    }
-//
-//    @Bean
-//    public NewTopic notifyEndingTopic() {
-//        return buildTopic(ETopics.NOTIFY_ENDING.getTopic());
-//
-//
-//    }
+    private NewTopic buildTopic(String name) {
+        return TopicBuilder
+                .name(name)
+                .replicas(REPLICATION_COUNT)
+                .partitions(PARTITION_COUNT)
+                .build();
+    }
+
+
+    @Bean
+    public NewTopic startSagaTopic() {
+
+        return buildTopic(ETopics.START_SAGA.getTopic());
+    }
+
+
+    @Bean
+    public NewTopic orchestratorTopic() {
+
+        return buildTopic(ETopics.BASE_ORCHESTRATOR.getTopic());
+    }
+
+    @Bean
+    public NewTopic finishSuccessTopic() {
+        return buildTopic(ETopics.FINISH_SUCCESS.getTopic());
+
+    }
+
+    @Bean
+    public NewTopic finishFailTopic() {
+        return buildTopic(ETopics.FINISH_FAIL.getTopic());
+
+
+    }
+
+    @Bean
+    public NewTopic productValidationSuccessTopic() {
+        return buildTopic(ETopics.PRODUCT_VALIDATION_SUCCESS.getTopic());
+
+    }
+
+    @Bean
+    public NewTopic productValidationFailTopic() {
+        return buildTopic(ETopics.PRODUCT_VALIDATION_FAIL.getTopic());
+
+
+    }
+
+
+    @Bean
+    public NewTopic paymentSuccessTopic() {
+        return buildTopic(ETopics.PAYMENT_SUCCESS.getTopic());
+
+    }
+
+    @Bean
+    public NewTopic paymentFailTopic() {
+        return buildTopic(ETopics.PAYMENT_FAIL.getTopic());
+
+    }
+
+
+    @Bean
+    public NewTopic inventorySuccessTopic() {
+        return buildTopic(ETopics.INVENTORY_SUCCESS.getTopic());
+
+    }
+
+    @Bean
+    public NewTopic inventoryFailTopic() {
+        return buildTopic(ETopics.INVENTORY_FAIL.getTopic());
+
+
+    }
+
+    @Bean
+    public NewTopic notifyEndingTopic() {
+        return buildTopic(ETopics.NOTIFY_ENDING.getTopic());
+
+
+    }
 }
